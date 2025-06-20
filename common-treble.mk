@@ -97,9 +97,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health-service.sony
 
+ifeq ($(TARGET_VIBRATOR_V1_2),true)
+# QTI Haptics Vibrator
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator@1.2-service
+else
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
+endif
 
 # Fingerprint
 PRODUCT_PACKAGES += \
