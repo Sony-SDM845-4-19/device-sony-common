@@ -84,7 +84,3 @@ ifeq ($(TARGET_USES_DSP_SERVICE),true)
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.dsp@1.0-service.rc
 endif
-
-# Media Codec2 service
-PRODUCT_PACKAGES += \
-    vendor.qti.media.c2@1.0-service.rc
