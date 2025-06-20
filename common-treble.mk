@@ -83,7 +83,7 @@ PRODUCT_PACKAGES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.nxp
+    android.hardware.nfc@1.2-service
 
 # GNSS
 PRODUCT_PACKAGES += \
