@@ -1,5 +1,7 @@
 # Vendor version
-TARGET_VENDOR_VERSION := v1
+TARGET_VENDOR_VERSION := v7
+
+ifneq (,$(SONY_BUILD_ODM))
 
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
@@ -12,8 +14,6 @@ BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
 
 PRODUCT_ODM_PROPERTIES += \
     ro.odm.version=$(PLATFORM_VERSION)_$(SOMC_KERNEL_VERSION)_$(SOMC_PLATFORM)_$(TARGET_VENDOR_VERSION)
-
-ifneq (,$(SONY_BUILD_ODM))
 
 # Clear device-specific info from platform-level odm image
 PRODUCT_PACKAGES += \
