@@ -30,46 +30,52 @@
 
 # Empty framework jars to bindmount from ODM
 ifeq (,$(SONY_BUILD_ODM))
-PRODUCT_PACKAGES += \
-    com.qti.dpmframework_fake \
-    com.qualcomm.qti.imscmservice-V2.0-java_fake \
-    com.qualcomm.qti.imscmservice-V2.1-java_fake \
-    com.qualcomm.qti.imscmservice-V2.2-java_fake \
-    com.qualcomm.qti.uceservice-V2.0-java_fake \
-    com.qualcomm.qti.uceservice-V2.1-java_fake \
-    com.qualcomm.qti.uceservice-V2.2-java_fake \
-    com.qualcomm.qti.uceservice-V2.3-java_fake \
-    qmapbridge_fake \
-    dpmapi_fake \
-    embmslibrary_fake \
-    ims-ext-common_fake \
-    qcrilhook_fake \
-    QtiTelephonyServicelibrary_fake \
-    uimgbalibrary_fake \
-    uimgbamanagerlibrary_fake \
-    uimlpalibrary_fake \
-    uimremoteclientlibrary_fake \
-    uimremoteserverlibrary_fake \
-    uimservicelibrary_fake \
-    vendor.qti.data.factory-V1.0-java_fake \
-    vendor.qti.data.factory-V2.0-java_fake \
-    vendor.qti.hardware.data.connection-V1.0-java_fake \
-    vendor.qti.hardware.data.connection-V1.1-java_fake \
-    vendor.qti.hardware.data.dynamicdds-V1.0-java_fake \
-    vendor.qti.ims.rcsconfig-V1.0-java_fake \
-    vendor.qti.ims.callinfo-V1.0-java_fake
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.qti.dpmframework.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.qualcomm.qti.uceservice-V2.0-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.qualcomm.qti.uceservice-V2.1-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.qualcomm.qti.uceservice-V2.2-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.qualcomm.qti.uceservice-V2.3-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qmapbridge.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/dpmapi.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/embmslibrary.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/ims-ext-common.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qcrilhook.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/QtiTelephonyServicelibrary.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/uimgbalibrary.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/uimgbamanagerlibrary.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/uimlpalibrary.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/uimremoteclientlibrary.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/uimremoteserverlibrary.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/uimservicelibrary.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.data.factory-V1.0-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.data.factory-V2.0-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.hardware.data.connection-V1.0-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.hardware.data.connection-V1.1-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar \
+    $(COMMON_PATH)/misc/emptyfile.zip:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.ims.callinfo-V1.0-java.jar
 
 # QTI libraries for system_ext
-PRODUCT_PACKAGES += \
-    libOpenCL_system_fake \
-    libQSEEComAPI_system_fake \
-    libadsprpc_system_fake \
-    libcdsprpc_system_fake \
-    libmdsprpc_system_fake \
-    libsdsprpc_system_fake \
-    libdiag_system_fake \
-    libimscamera_jni_fake \
-    libimsmedia_jni_fake
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libOpenCL_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libQSEEComAPI_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libadsprpc_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libcdsprpc_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmdsprpc_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libsdsprpc_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libOpenCL_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libQSEEComAPI_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libadsprpc_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libcdsprpc_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmdsprpc_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libsdsprpc_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdiag_system.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libimscamera_jni.so \
+    $(COMMON_PATH)/misc/emptyfile:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libimsmedia_jni.so
 
 ifneq ($(TARGET_USES_ODM_APPS_BINDMOUNT),false)
 # Create folders for priv-apps
